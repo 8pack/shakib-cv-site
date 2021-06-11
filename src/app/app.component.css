@@ -1,0 +1,237 @@
+
+:host {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  /* font-family: Coolvetica_b,Helvetica,sans-serif; */
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --blue: #1976d2AA;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 8px auto;
+}
+
+p {
+  margin: 0;
+}
+
+.bkgd_img {
+  background-image:  url('../assets/img/8_blur_frame.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 40vh;
+  margin: -8px 0px ;
+  padding: 0px;
+}
+
+svg.arc{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  /* height: 100%; */
+  /* width: 1450px;
+  height: 1100px; */
+  margin: 0px;
+  padding: 0px;
+}
+svg.arc .filled_arc {
+  opacity:1;
+  fill:#004a7f77;
+  fill: var(--blue);
+  fill-opacity:1;
+  stroke-width:1
+}
+
+
+.hey_there {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  margin: auto;
+  top: 50%;
+  position: relative;
+}
+#hey_im {
+  font-style: italic;
+}
+#name::before, #name::after {
+  content: " ⸺  ";
+  color: var(--blue);
+}
+
+.inner  {
+  top: 20px;
+  display: flex;
+  color: #fff;
+}
+
+.inner li {
+  margin-left: 24px;
+  margin-right: 10px;
+  letter-spacing: 1px;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+  position: relative;
+}
+.inner li:hover {
+  transform: scale(1.4);
+}
+
+.inner a{
+  color: #fff;
+}
+
+#hamburger_container {
+  /* float: right; */
+  /* margin-left: 90vw;
+  margin-top: 90vh;
+  position: sticky; */
+  position: fixed;
+  /* background-color: red; */
+  top: 20px;
+  right: 40px;
+  width: 90px;
+  height: 90px;
+  padding: 0px;
+  transform: scale(0);
+  transform-origin: center;
+  transition: transform .25s;
+}
+.toolbar[data-scroll="out"] ~ #hamburger_container {
+  transform: scale(1);
+}
+
+#hamburger {
+  /* width: 40px;
+  height: 22px; */
+  padding: 15px;
+  fill: var(--blue);
+}
+#hamburger:hover {
+  cursor: pointer;
+}
+
+.toolbar {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  align-items: center;
+}
+
+
+.content {
+  /* display: flex;
+  flex-direction: column; */
+  margin: 8px auto 32px;
+  padding: 0 16px;
+  width: 960px;
+  max-width: 960px;
+  align-items: center;
+}
+
+.summary {
+  font-size: 48px;
+  /* background: red; */
+  /* color: var(--blue); */
+  line-height: 1.1em;
+}
+.summary h5{
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.summary .active {
+  /* background: yellow; */
+  /* display: inline-block; */
+  /* transform: scale(1);
+  transform-origin: left center; */
+  transform: scale(1);
+}
+.summary h5:not(.active) > *, .summary h5:not(.active) {
+
+  transform: scale(0);
+  /* display: none; */
+  /* transition: all 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+  transform-origin: left center; */
+}
+.smaller {
+  font-size: 48px;
+  transform: scale(1);
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+}
+.bigger {
+  font-size: 72px;
+  transform: scale(1);
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
+}
+.load_next {
+  position: absolute;
+  /* left: 0;
+  right: 0; */
+  top: 50vh;
+  background-color: var(--blue);
+  /* width: 60%; */
+  /* left: 30vw; */
+  /* right: 60vw; */
+  margin-left: auto;
+  margin-right: auto;
+  height: 5px;
+}
+#nextSummary {
+  margin-top: 15vh;
+}
+
+.flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+  /* flex-direction: row; */
+
+}
+.flexbox * {
+  flex: 0 0 48%;
+  /* overflow: auto; */
+  margin: 0px auto 0px 5px;
+  padding: 10px 0px;
+  /* max-width: calc(50% - 50px); */
+  /* margin: 20px 10px; */
+  /* background-color: blue;
+  color: white; */
+}
+
+footer {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+}
+
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 575px) {
+}

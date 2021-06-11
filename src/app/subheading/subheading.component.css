@@ -1,0 +1,21 @@
+.subheading {
+  font-size: 36px;
+  margin-bottom: 0px;
+  transform-origin: left-center;
+}
+
+.subheading[data-scroll="in"]{
+  animation:
+    scaledown .5s steps(100) 1;
+}
+
+@keyframes scaledown {
+  from { margin-left: 180px; transform: scale(1.4); opacity: 0%;}
+  /* 90% {margin-left: 5px; transform: scale(1); } */
+  to { margin-left: 0px; transform: scale(1); opacity: 100%}
+}
+
+.subheading::after {
+  content: "⸻";
+  color: var(--blue);
+}
