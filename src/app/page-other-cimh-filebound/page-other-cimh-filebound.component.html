@@ -1,0 +1,23 @@
+<app-project-page-preview sclass="banner_filebound" imgsrc='assets/img/filebound.png' title="CIMH Filebound Administrator" desc="Form & Workflow Design" tags="filebound" routerLink="/cimh-filebound" onclick="openPage()"></app-project-page-preview>
+
+<section class="content" role="main">
+
+  <app-project-page-details
+    details="
+    <p><b>Project URL: <a href='https://www.filebound.solutions/' rel='noopener noreferrer' target='_blank'>https://www.filebound.solutions/</a></b> <i>(not a link to CIMH's filebound system for security reasons)</i></p>
+    <ul>
+      <li>Learnt the ins and outs of FileBound when CIMH was in the process of going paperless.</li>
+      <li>Designed and edited workflows, projects, and forms inside FileBound.</li>
+      <li>Assisted any staff members with how to do various tasks in FileBound.</li>
+    </ul>">
+
+  </app-project-page-details>
+
+
+  <app-show-project-previews
+    [web_array]="['alty', 'patriot', 'emce', 'fch', 'music', 'scriptcase', 'webalert', 'we_plantin']"
+    [mobile_array]="['cimh_app', 'crowdsourced']"
+    [other_array]="['pest_disease', 'cid']"
+  >
+  </app-show-project-previews>
+</section>

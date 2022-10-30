@@ -1,0 +1,21 @@
+<app-project-page-preview sclass="banner_we_plantin" imgsrc='assets/img/we_plantin.png' title="We Plantin' Website Assistance" desc="Proposal Web Page" tags="web | development" routerLink="/we_plantin" onclick="openPage()"></app-project-page-preview>
+
+<section class="content" role="main">
+
+  <app-project-page-details
+    details="
+    <p><b>Project URL: <a href='https://www.weplantin.org/' rel='noopener noreferrer' target='_blank'>https://www.weplantin.org/</a></b></p>
+    <ul>
+      <li>With CIMH, made a proposal web page for the government of Barbados and their 'We Plantin' More Than A Million Trees' Initiative.</li>
+      <li>Users would be able to upload pictures of the trees they took as a means to track how many trees were planted.</li>
+    </ul>">
+
+  </app-project-page-details>
+
+  <app-show-project-previews
+    [web_array]="['alty', 'patriot', 'emce', 'fch', 'music', 'scriptcase', 'webalert']"
+    [mobile_array]="['cimh_app', 'crowdsourced']"
+    [other_array]="['pest_disease', 'filebound', 'cid']"
+  >
+  </app-show-project-previews>
+</section>

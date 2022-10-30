@@ -1,0 +1,61 @@
+.flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgb(25 118 210 / 5%);
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+  align-items: center;
+}
+.flexbox:hover {
+  background-color: rgb(25 118 210 / 5%);
+}
+.flexbox *:not(.skill_name) {
+  flex: none;
+  margin: 0px auto 0px 5px;
+  padding: 0px 0px;
+}
+
+.skill_name {
+  flex: 1 1 50%;
+  font-size: 24px;
+  line-height: 24px;
+  margin-right: 30px;
+}
+
+
+.svg_container {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+.svg_circle {
+  fill: var(--blue);
+}
+.svg_circle_not {
+  fill: #A7A7A7;
+}
+
+
+@media screen and (max-width: 575px) {
+
+}
+
+@media screen and (max-width: 435px) {
+
+  .skill_name {
+    flex: 0 1 45%;
+    font-size: 18px;
+    /* font-weight: bold; */
+    line-height: 18px;
+    margin-right: 20px;
+  }
+
+  .svg_container {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+  }
+}

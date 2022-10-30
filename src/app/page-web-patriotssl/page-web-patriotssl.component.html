@@ -1,0 +1,21 @@
+<app-project-page-preview sclass="banner_patriotssl" imgsrc='assets/img/patriotssl.png' title="Patriotssl.com" desc="Website for Patriot Security Services Ltd." tags="web | wordpress | freelance" routerLink="/patriot" onclick="openPage()"></app-project-page-preview>
+
+<section class="content" role="main">
+
+  <app-project-page-details
+    details="
+    <p><b>Project URL: <a href='https://patriotssl.com/' rel='noopener noreferrer' target='_blank'>https://patriotssl.com/</a></b></p>
+    <ul>
+      <li>Used Elementor WordPress to implement the design for the new Patriot Security Systems Ltd website.</li>
+      <li>Used ReCaptcha 3 to avoid spam with the contact us form.</li>
+    </ul>">
+
+  </app-project-page-details>
+
+  <app-show-project-previews
+    [web_array]="['alty', 'emce', 'fch', 'music', 'scriptcase', 'webalert', 'we_plantin']"
+    [mobile_array]="['cimh_app', 'crowdsourced']"
+    [other_array]="['pest_disease', 'filebound', 'cid']"
+  >
+  </app-show-project-previews>
+</section>

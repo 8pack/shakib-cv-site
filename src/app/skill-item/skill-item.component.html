@@ -1,0 +1,11 @@
+<div class="flexbox" >
+  <div class="skill_name">{{skill}}</div>
+
+  <!-- Creates amount of circles based on the inputed number -->
+  <svg class="svg_container" viewBox="0 0 100 100" *ngFor="let a of fakeArray; let index = index">
+    <circle cx="50" cy="50" r="50" class="svg_circle" ></circle>
+  </svg>
+  <svg class="svg_container" viewBox="0 0 100 100" *ngFor="let a of fakeArrayRemaining; let index = index">
+    <circle cx="50" cy="50" r="50" class="svg_circle_not" ></circle>
+  </svg>
+</div>

@@ -1,0 +1,24 @@
+<app-project-page-preview sclass="banner_cimh_app" imgsrc='assets/img/cimh-app_desktop.png' title="CIMH General App" desc="Business Application" tags="mobile | android | ios | cordova" routerLink="/cimh-app" onclick="openPage()"></app-project-page-preview>
+
+<section class="content" role="main">
+
+  <app-project-page-details
+    details="
+    <p><b>Project URL: <a href='https://play.google.com/store/apps/developer?id=CIMH+Developer' rel='noopener noreferrer' target='_blank'>https://play.google.com/store/apps/developer?id=CIMH+Developer</a></b></p>
+    <ul>
+      <li>Used Apache Cordova to develop simultaneously for Android and iOS using HTM, CSS, JavaScript & PHP.</li>
+      <li>Implemented key features: Caribbean Meteorological Organisation (CMO) Map, Weather Reports, Trending, Calendar, Abscences, Opportunities</li>
+      <li>Successfully deployed to both Google Play and Apple stores.</li>
+      <li>Gave presentations about the CIMH App to staff members.</li>
+    </ul>">
+
+  </app-project-page-details>
+
+
+  <app-show-project-previews
+    [web_array]="['alty', 'patriot', 'emce', 'fch', 'music', 'scriptcase', 'webalert', 'we_plantin']"
+    [mobile_array]="['crowdsourced']"
+    [other_array]="['pest_disease', 'filebound', 'cid']"
+  >
+  </app-show-project-previews>
+</section>

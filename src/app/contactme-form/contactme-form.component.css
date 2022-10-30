@@ -1,0 +1,108 @@
+
+
+.form_wrapper {
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+  transform: scale(0);
+  transform-origin: bottom;
+  opacity: 0.0;
+}
+
+.form_wrapper[data-scroll="in"] {
+  transform: scale(1);
+  opacity: 1.0;
+}
+
+.contact-form {
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  box-shadow: rgb(25 118 210 / 25%) 0px 0px 20px 0px;
+  box-shadow: var(--blue-80) 0px 8px 20px 0px;
+  border-radius: 12px;
+  /* #1976d2 = 25, 118, 210 📋*/
+}
+
+.input-group {
+  flex: 0 1 50%;
+  /* margin: auto; */
+  padding: var(--input_padding);
+  box-sizing: border-box;
+  position: relative;
+}
+/* Makes the last input-group full width */
+.last {
+  flex: 1 0 100%;
+}
+
+
+.input-group input, .input-group textarea {
+  width: 100%;
+  margin-bottom: 30px;
+  font-size: 24px;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  border-bottom: rgb(25 118 210 / 25%) solid 1px;
+}
+.input-group textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* Moves Label up on input focus */
+.input-group input:focus + label, .input-group textarea:focus + label{
+  transform: translateY(-24px);
+}
+
+.input-group > label {
+  color: var(--blue);
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  top: 6px;
+  left: 2px;
+  bottom: 0px;
+  padding-left: var(--input_padding);
+  transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+  transform-origin: left center;
+}
+
+.bottom-area {
+  flex: 0 1 100%;
+}
+.bottom-area button {
+  outline: 0px;
+  border: none;
+  border-radius: 20px;
+  font-size: 24px;
+  padding: 5px 40px;
+  height: 50px;
+  display: block;
+  margin: auto;
+  box-sizing: border-box;
+  background-color: var(--blue);
+  color: white;
+}
+.bottom-area button:hover {
+  cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 575px) {
+
+  .form_wrapper {
+    padding: 20px;
+  }
+  .contact-form {
+    width: 100%;
+    padding: 40px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    box-shadow: rgb(25 118 210 / 25%) 0px 0px 20px 0px;
+    box-shadow: var(--blue-80) 0px 8px 20px 0px;
+    /* #1976d2 = 25, 118, 210 📋*/
+  }
+}

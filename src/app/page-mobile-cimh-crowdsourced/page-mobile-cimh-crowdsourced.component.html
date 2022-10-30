@@ -1,0 +1,23 @@
+<app-project-page-preview sclass="banner_cimh_crowdsourced" imgsrc='assets/img/cimh_crowdsourced.jpg' title="CIMH Crowdsource" desc="Weather Crowdsource Android App" tags="mobile | android | native" routerLink="/cimh-crowdsourced" onclick="openPage()"></app-project-page-preview>
+
+<section class="content" role="main">
+  <app-project-page-details
+    details="
+    <p><b>Project URL: <a href='https://play.google.com/store/apps/developer?id=CIMH+Developer' rel='noopener noreferrer' target='_blank'>https://play.google.com/store/apps/developer?id=CIMH+Developer</a></b></p>
+    <ul>
+      <li>Used Android Studio to develop an app to mass crowdsource weather data from mobile devices in the caribbean.</li>
+      <li>Android device sensors measure, record and transmit parameters such as barometric pressure and battery temperature and then are correlated to atmospheric temperature at the recorded location.</li>
+      <li>The crowdsourcing project was presented at a National Council for Science and Technology conference in 2019.</li>
+      <li>Successfully deployed to Google Play store.</li>
+    </ul>">
+
+  </app-project-page-details>
+
+
+  <app-show-project-previews
+    [web_array]="['alty', 'patriot', 'emce', 'fch', 'music', 'scriptcase', 'webalert', 'we_plantin']"
+    [mobile_array]="['crowdsourced']"
+    [other_array]="['pest_disease', 'filebound', 'cid']"
+  >
+  </app-show-project-previews>
+</section>

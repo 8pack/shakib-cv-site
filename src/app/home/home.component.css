@@ -1,0 +1,215 @@
+
+.summary {
+  font-size: 48px;
+  min-height: 315px;
+  min-height: 20rem;
+  min-height: 40vh;
+}
+.summary h5{
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.summary .active {
+  transform: scale(1);
+}
+.summary h5:not(.active) > *, .summary h5:not(.active) {
+  height: 0px;
+  transform: scale(0);
+}
+.smaller {
+  font-size: 48px;
+  transform: scale(1);
+  transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+}
+.bigger {
+  font-size: 72px;
+  transform: scale(1);
+  transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.bigger .bigger_item{
+  margin: 1rem auto;
+}
+.load_next {
+  position: absolute;
+  /* left: 0;
+  right: 0; */
+  top: 50vh;
+  background-color: var(--blue);
+  /* width: 60%; */
+  /* left: 30vw; */
+  /* right: 60vw; */
+  margin-left: auto;
+  margin-right: auto;
+  height: 5px;
+}
+#nextSummary {
+  /* margin-top: 15vh; */
+
+}
+
+
+
+.about_me_flex_item {
+  flex: 0 0 45% !important;
+}
+/* Changes the List Item marker from • to custom */
+.about_me_flex_item li::marker {
+  content: "";
+  color: var(--blue);
+}
+.about_me_flex_item li {
+  vertical-align: top;
+  position: relative;
+  margin-left: 2em;
+}
+/* Adds custom Circlular custom marker using ::before  */
+.about_me_flex_item li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 3px solid var(--blue);
+  border-radius: 50px;
+  padding: 8px;
+  left: -2em;
+  top: 1.4em;
+  box-sizing: border-box;
+  transform: scale(0);
+  transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+}
+.about_me_flex_item li[data-scroll="in"]::before {
+  transform: scale(1);
+}
+
+/* Adds the LINE of the custom marker using ::after */
+.about_me_flex_item li:not(:last-of-type)::after {
+  content: "";
+  width: 3px;
+  position: absolute;
+  height: calc(100% - 21px);
+  left: calc(10px - 2em);
+  top: calc(1.4em + 21px);
+  background: var(--blue);
+  box-sizing: border-box;
+  transform: scale(0);
+  transform-origin: top;
+  transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
+}
+.about_me_flex_item li[data-scroll="in"]::after {
+  transform: scale(1);
+}
+
+/* Section for list of skill items */
+.skill_items {
+  margin: auto;
+  padding: 3em;
+  box-shadow: rgb(25 118 210 / 25%) 0px 0px 20px 0px;
+  box-shadow: var(--blue-80) 0px 8px 20px 0px;
+  border: 1px rgb(25 118 219 / 5%) solid;
+  border-radius: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
+}
+.skill_items[data-scroll="in"] {
+  transform: scale(1);
+  opacity: 1;
+}
+.skill_items[data-scroll="out"] {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.skill_items_column {
+  flex: 0 1 45%;
+  margin: 0 auto;
+  box-shadow: rgb(25 118 210 / 5%) 0px 0px 20px 0px;
+  box-shadow: var(--blue-80) 0px 8px 20px 0px;
+  padding: 20px;
+  border-radius: 20px;
+}
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+
+  .skill_items_column {
+    flex: 1 1 50%;
+    margin: 0 auto;
+    padding: 20px 20px 0px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+
+/*
+  #hamburger_container {
+    position: relative;
+    top: 20px;
+    right: 40px;
+    width: 90px;
+    height: 90px;
+    padding: 0px;
+    transform: scale(0);
+    transform-origin: center;
+    transition: transform .25s;
+  } */
+
+
+
+    .hey_there {
+      font-size: 18px;
+      margin: 50vh auto auto;
+
+    }
+    #hey_im {
+    }
+    #name {
+      font-size: 1em;
+    }
+    #name::before, #name::after {
+    }
+
+  .summary {
+    font-size: 28px;
+  }
+
+  .summary h5{
+    font-size: 36px;
+  }
+
+  .smaller {
+    font-size: 28px;
+  }
+  .bigger {
+    font-size: 36px;
+  }
+
+  .skill_items {
+    padding: 3em 0px;
+  }
+
+
+  .flexbox {
+    justify-content: center;
+  }
+
+  .flexbox > * {
+    margin: auto;
+  }
+  .flexbox .svg_container {
+    flex: 1 1 20%!important;
+  }
+
+  footer{
+    text-align: center;
+  }
+}
+
+
+@media screen and (max-width: 435px) {
+
+}

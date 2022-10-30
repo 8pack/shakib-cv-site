@@ -7,18 +7,13 @@ declare function nextSummary(): void;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'shakib-cv-site';
+  title = 'Shakib Small';
   header: HTMLScriptElement;
-  scrollout: HTMLScriptElement;
 
   constructor() {
 
-    this.scrollout = document.createElement("script");
-    this.scrollout.src = "../../assets/js/scroll-out.js";
-    document.body.appendChild(this.scrollout);
-
     this.header = document.createElement("script");
-    this.header.src = "../../assets/js/header.js";
+    this.header.src = "assets/js/header.js";
     document.body.appendChild(this.header);
   }
 }

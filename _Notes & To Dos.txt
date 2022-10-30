@@ -12,6 +12,8 @@ https://denismoulin.com/# - Backup inspiration maybe.
 
 https://www.garylemasson.com/en - This is just awesome.
 
+https://jamesclear.com/thanks - Thanks Section
+
 
 
 TO DOs:
@@ -19,3 +21,67 @@ TO DOs:
 Triangle in the background. Maybe triangular image of me.
 
 Talk about http://eurec4a.eu/
+
+
+
+Performance Testers:
+https://www.webpagetest.org/
+
+https://developers.google.com/speed/pagespeed/insights/
+
+
+
+
+//Superscript ratio For Logo
+0.64705882352
+
+Computer Science Intern
+CIMH | January 2017 - April 2021
+PHP focused Web Development with Scriptcase. 
+Mobile App Development with Cordova
+Native Android App Development.
+Small scale python development.
+
+Full stack web development for investment banking services with emphasis on React.js, Angular, .NET Core based solutions using Test Driven Development methodology.
+
+
+Intern
+Systems Consulting Limited | June - August 2015
+Data Dictionary development for their Micropay database.
+Entity–relationship diagram design.
+
+
+Student IT Technician
+Campus IT Services at University of the West Indies Cave Hill | 2014 - 2015
+
+Managing and setting up projectors, speakers, microphones, wireless systems and cameras
+Organizing and data entry for presentations using Microsoft Office suite
+Providing assistance and troubleshooting for Apple and Microsoft software devices
+
+
+
+wordpress study
+
+monday
+Damian
+
+support@alty.com
+following the call with Liran i would like to join the training.
+
+
+
+JavaScript / JQuery / VueJs                                  MS Visual Studio
+
+.NET  MS C#                                                        GitHub
+
+PHP / Laravel                                                        HTML / CSS
+
+Java is a plus                                                        C/C++ is a plus
+
+MS SQL Server 2005/2008/2012                       Agile / SCRUM
+
+MySQL                                                                Web Application Development
+
+Web service / Restful / Json                                PBX setup and maintenance
+
+API development                                                 Email server maintenance

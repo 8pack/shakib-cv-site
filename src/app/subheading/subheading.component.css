@@ -10,12 +10,42 @@
 }
 
 @keyframes scaledown {
-  from { margin-left: 180px; transform: scale(1.4); opacity: 0%;}
-  /* 90% {margin-left: 5px; transform: scale(1); } */
-  to { margin-left: 0px; transform: scale(1); opacity: 100%}
+  from { margin-left: 180px; transform: scale(1.4); opacity: 0.0;}
+  to { margin-left: 0px; transform: scale(1); opacity: 1.0}
 }
 
 .subheading::after {
   content: "⸻";
   color: var(--blue);
+}
+
+.dot {
+  color: var(--blue);
+  padding-right: 0.15em;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .subheading {
+    transform-origin: left top;
+      font-size: 32px;
+  }
+
+  @keyframes scaledown {
+    from { margin-left: 0px; margin-top: 100px; opacity: 0.0;}
+    to { margin-left: 0px; margin-top: 0px; opacity: 1.0}
+  }
+}
+
+
+@media screen and (max-width: 575px) {
+  .subheading {
+    transform-origin: left top;
+    text-align: center;
+  }
+
+  @keyframes scaledown {
+    from { margin-left: 0px; margin-top: 100px; opacity: 0.0;}
+    to { margin-left: 0px; margin-top: 0px; opacity: 1.0}
+  }
 }

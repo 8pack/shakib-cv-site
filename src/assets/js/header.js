@@ -1,25 +1,3 @@
-
-  function nextSummary() {
-    // let summ = document.getElementById("summary");
-    // let h5s = summ.getElementsByTagName("h5");
-    // let curr_active = h5s.querySelector(".active");
-    let curr_active = document.querySelector(".summary h5.active");
-    console.log(curr_active);
-    let nextSibling = curr_active.nextSibling;
-
-    if(nextSibling)
-    {
-      curr_active.classList.remove("active");
-      nextSibling.classList.add("active");
-    }
-    else {
-      nextSibling = document.querySelector(".summary h5:first-child");
-      curr_active.classList.remove("active");
-      nextSibling.classList.add("active");
-    }
-  }
-
-
   var ScrollOut = (function () {
     'use strict';
 
@@ -287,6 +265,37 @@
   }());
 
 
+window.onbeforeunload = function () {
+  window.scrollTo(0,0);
+};
+
 ScrollOut({
-  targets: '#hamburger_container, .toolbar, .inner, .typewriter, .subheading, .project_container'
+  targets: `#hamburger_container,
+            #side_bar`,
+  once: false,
+  threshold: 0.02
 });
+
+ScrollOut({
+  targets: `.toolbar,
+            .inner,
+            .typewriter,
+            .subheading,
+            .project_container,
+            .about_me_header,
+            .details_container,
+            .about_me_flex_item li,
+            .form_wrapper,
+            .skill_items
+            `,
+  once: true,
+  // threshold: 0.02
+});
+
+
+
+
+
+function openPage() {
+  console.log("clicked openPage");
+}

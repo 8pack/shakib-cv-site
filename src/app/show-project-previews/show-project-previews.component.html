@@ -1,0 +1,29 @@
+
+  <section *ngIf="web_array.length != 0 || mobile_array.length != 0 || other_array.length != 0">
+    <app-typewriter-heading typewriter_val="projects" id="projects"></app-typewriter-heading>
+
+    <app-subheading subheading_val="Web design & Development" *ngIf="web_array.length != 0"></app-subheading>
+    <div class="flexbox" *ngIf="web_array.length != 0">
+      <app-project-preview *ngIf="web_array.includes('alty')" imgsrc='assets/img/alty.com.png' title="Alty.com" desc="Crypto Chatbot for Whatsapp, Telegram & Discord" tags="web | development | wordpress" routerLink="/alty" onclick="openPage()"></app-project-preview>
+      <app-project-preview *ngIf="web_array.includes('patriot')" imgsrc='assets/img/patriotssl.png' title="Patriotssl.com" desc="Website for Patriot Security Services Ltd." tags="web | wordpress | freelance" routerLink="/patriot"></app-project-preview>
+      <app-project-preview *ngIf="web_array.includes('emce')" imgsrc='assets/img/emceltd.png' title="emceltd.com" desc="Website for emceltd" tags="web | wordpress | freelance" routerLink="/emce"></app-project-preview>
+      <app-project-preview *ngIf="web_array.includes('fch')" imgsrc='assets/img/fch.techbase.solutions.png' title="fch.techbase.solutions" desc="Website for Frank Collymore Hall" tags="web | wordpress | freelance" routerLink="/fch"></app-project-preview>
+      <app-project-preview *ngIf="web_array.includes('music')" imgsrc='assets/img/shakibs_music_server.png' title="Shakib's Music Server" desc="Media Player Web App" tags="web | development | personal | python" routerLink="/music"></app-project-preview>
+      <app-project-preview *ngIf="web_array.includes('scriptcase')" imgsrc='assets/img/cimh_scriptcase.png' title="CIMH Scriptcase" desc="Climatology Database Application" tags="web | development" routerLink="/cimh-scriptcase"></app-project-preview>
+      <app-project-preview *ngIf="web_array.includes('webalert')" imgsrc='assets/img/cimh_webalert.png' title="CIMH WebAlert" desc="Cap Alert Manager Site" tags="web | development" routerLink="/cimh-webalert"></app-project-preview>
+      <app-project-preview *ngIf="web_array.includes('we_plantin')" imgsrc='assets/img/we_plantin.png' title="We Plantin' Website Assistance" desc="Proposal Web Page" tags="web | development" routerLink="/we_plantin"></app-project-preview>
+    </div>
+
+    <app-subheading subheading_val="Mobile Apps" *ngIf="mobile_array.length != 0"></app-subheading>
+    <div class="flexbox" *ngIf="mobile_array.length != 0">
+      <app-project-preview *ngIf="mobile_array.includes('cimh_app')" imgsrc='assets/img/cimh-app_desktop.png' title="CIMH General App" desc="Buniess Application" tags="mobile | android | ios | cordova" routerLink="/cimh-app"></app-project-preview>
+      <app-project-preview *ngIf="mobile_array.includes('crowdsourced')" imgsrc='assets/img/cimh_crowdsourced.jpg' title="CIMH Crowdsourced" desc="Weather Crowdsource Android App" tags="mobile | android | native" routerLink="/cimh-crowdsourced"></app-project-preview>
+    </div>
+
+    <app-subheading subheading_val="Other projects" *ngIf="other_array.length != 0"></app-subheading>
+    <div class="flexbox" *ngIf="other_array.length != 0">
+      <app-project-preview *ngIf="other_array.includes('pest_disease')" imgsrc='assets/img/pest_disease_python1.png' title="CIMH Pest & Disease Risk Index Script" desc="Small Python Application" tags="python" routerLink="/cimh-pest_disease"></app-project-preview>
+      <app-project-preview *ngIf="other_array.includes('filebound')" imgsrc='assets/img/filebound.png' title="CIMH Filebound Administrator" desc="Form & Workflow Design" tags="filebound" routerLink="/cimh-filebound"></app-project-preview>
+      <app-project-preview *ngIf="other_array.includes('cid')" imgsrc='assets/img/cimh_cid.png' title="CIMH Climate Impacts Dataset" desc="Climate Events & Impacts Compilation " tags="python | excel | georeferencing" routerLink="/cimh-cid"></app-project-preview>
+    </div>
+  </section>

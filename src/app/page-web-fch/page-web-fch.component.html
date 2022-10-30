@@ -1,0 +1,23 @@
+<app-project-page-preview sclass="banner_fch" imgsrc='assets/img/fch.techbase.solutions.png' title="fch.techbase.solutions" desc="Website for Frank Collymore Hall" tags="web | wordpress | freelance" routerLink="/fch" onclick="openPage()"></app-project-page-preview>
+
+<section class="content" role="main">
+
+  <app-project-page-details
+    details="
+    <p><b>Project URL: <a href='https://fch.techbase.solutions/' rel='noopener noreferrer' target='_blank'>https://fch.techbase.solutions/</a></b></p>
+    <ul>
+      <li>Used DIVI WordPress to implement the Design for the New Frank Collymore Hall website.</li>
+      <li>Used The Events Calendar to manage the events for the site.</li>
+      <li>Created a Gallery for image albums owned by Frank Collymore Hall.</li>
+      <li>Designed & Implemented a Contact Us page for the website.</li>
+    </ul>">
+
+  </app-project-page-details>
+
+  <app-show-project-previews
+    [web_array]="['alty', 'patriot', 'emce', 'music', 'scriptcase', 'webalert', 'we_plantin']"
+    [mobile_array]="['cimh_app', 'crowdsourced']"
+    [other_array]="['pest_disease', 'filebound', 'cid']"
+  >
+  </app-show-project-previews>
+</section>

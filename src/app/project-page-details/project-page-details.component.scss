@@ -1,0 +1,50 @@
+.project_content {
+  justify-content: center;
+  margin-bottom: 10vh;
+  box-shadow: var(--blue-80) 0px 8px 20px 0px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 100px;
+}
+
+:host ::ng-deep .project_content {
+  a  {
+    color: var(--blue);
+  }
+  ul, p {
+    font-size: 1.3rem;
+  }
+  ul {
+    list-style-type: square;
+    list-style: none;
+
+    li {
+      &::before {
+        content: "";
+        display: block;
+        position: relative;
+        border: 3px solid var(--blue);
+        border-radius: 50px;
+        padding: 0.4rem;
+        left: -2rem;
+        top: 1.4rem;
+        height: 5px;
+        width: 5px;
+        box-sizing: border-box;
+        transform: scale(1);
+        transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+      }
+    }
+  }
+}
+:host-context(.themeable) .btn-theme {
+  background: blue;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .project_content {
+    padding: 80px 40px;
+  }
+}

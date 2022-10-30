@@ -8,7 +8,8 @@ import { Component, OnInit, Input  } from '@angular/core';
 export class SubheadingComponent implements OnInit {
 
   @Input() subheading_val: string = "";
-  
+  @Input('dot') dot:String = "";
+
   constructor() { }
 
   ngOnInit(): void {

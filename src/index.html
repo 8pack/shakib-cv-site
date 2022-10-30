@@ -2,13 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>ShakibCvSite</title>
+  <title>Shakib Small | Developer from Barbados</title>
+  <meta name="description" content="Hey, I'm Shakib Small. I'm a developer, an avid anime watcher and gamer.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Shakib Small | Developer from Barbados">
+  <meta property="og:description" content="Hey, I'm Shakib Small. I'm a developer, an avid anime watcher and gamer.">
+  <meta property="og:url" content="https://shakibsmall.com/">
+  <meta property="og:site_name" content="Shakib Small">
+  <meta property="og:image" content="https://shakibsmall.com/assets/img/Shakib_BlackWhite_blur.png">
+  <meta property="og:image:type" content="image/jpg">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Shakib Small | Developer from Barbados">
+  <meta property="twitter:description" content="Hey, I'm Shakib Small. I'm a developer, an avid anime watcher and gamer.">
+  <meta property="twitter:image" content="https://shakibsmall.com/assets/img/Shakib_BlackWhite_blur.png">
+  <meta property="twitter:label1" content="Est. reading time">
+  <meta property="twitter:data1" content="3 minutes">
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
 </head>
 <body>
   <app-root></app-root>
+    <!-- <div>https://www.tradays.com/en/widget</div>
+    <div id="economicCalendarWidget" style="margin: auto; min-width: 100%; display: flex; justify-content: center;"></div>
+    <script async type="text/javascript" data-type="calendar-widget" src="https://www.tradays.com/c/js/widgets/calendar/widget.js?v=12">
+      {"width":"90%","height":"400px","mode":"1","lang":"en","theme":1}
+    </script> -->
 </body>
+<script>
+  var count = 1;
+  try { setInterval(nextSummary, 5000); }
+  catch(err) { }
+
+  function nextSummary() {
+    let curr_active = document.querySelector(".summary h5.active");
+    let nextSibling = curr_active.nextSibling;
+    // console.log(curr_active, count++);
+
+    if(nextSibling)
+    {
+      curr_active.classList.remove("active");
+      nextSibling.classList.add("active");
+    }
+    else {
+      nextSibling = document.querySelector(".summary h5:first-child");
+      curr_active.classList.remove("active");
+      nextSibling.classList.add("active");
+    }
+  }
+
+
+  function open_hamburger_menu() {
+    let hamburger = document.querySelector("#hamburger");
+    let side_bar = document.querySelector("#side_bar");
+
+    if( hamburger.classList.contains("active") ){
+      hamburger.classList.remove("active");
+      side_bar.classList.remove("open");
+      side_bar.classList.add("close");
+    }
+    else {
+      hamburger.classList.add("active");
+      side_bar.classList.add("open");
+      side_bar.classList.remove("close");
+    }
+  }
+
+</script>
 </html>

@@ -1,0 +1,21 @@
+<app-project-page-preview sclass="banner_cimh_scriptcase" imgsrc='assets/img/cimh_scriptcase.jpg' title="CIMH Scriptcase" desc="Climatology Database Application" tags="web | development" routerLink="/cimh-scriptcase" onclick="openPage()"></app-project-page-preview>
+
+<section class="content" role="main">
+
+  <app-project-page-details
+    details="
+    <ul>
+      <li>Used Scriptcase's GUI to create applications that deliver climatology reports.</li>
+      <li>Used PHP to add desired functionality to the applications.</li>
+      <li>Created and edited tables using mySQL on a large Climatology Database</li>
+    </ul>">
+
+  </app-project-page-details>
+
+  <app-show-project-previews
+    [web_array]="['alty', 'patriot', 'emce', 'fch', 'music', 'webalert', 'we_plantin']"
+    [mobile_array]="['cimh_app', 'crowdsourced']"
+    [other_array]="['pest_disease', 'filebound', 'cid']"
+  >
+  </app-show-project-previews>
+</section>

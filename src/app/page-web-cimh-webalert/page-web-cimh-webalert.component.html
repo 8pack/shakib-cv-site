@@ -1,0 +1,20 @@
+<app-project-page-preview sclass="banner_cimh_webalert" imgsrc='assets/img/cimh_webalert.png' title="CIMH WebAlert" desc="Cap Alert Manager Site" tags="web | development" routerLink="/cimh-webalert" onclick="openPage()"></app-project-page-preview>
+
+<section class="content" role="main">
+
+  <app-project-page-details
+    details="
+    <p><b>Project URL: <a href='http://dev2.cimh.edu.bb/webalert/' rel='noopener noreferrer' target='_blank'>http://dev2.cimh.edu.bb/webalert/</a></b></p>
+    <ul>
+    <li>Front end web development of a national Common Alerting Protocol (CAP) manager.</li>
+    </ul>">
+
+  </app-project-page-details>
+
+  <app-show-project-previews
+    [web_array]="['alty', 'patriot', 'emce', 'fch', 'music', 'scriptcase', 'we_plantin']"
+    [mobile_array]="['cimh_app', 'crowdsourced']"
+    [other_array]="['pest_disease', 'filebound', 'cid']"
+  >
+  </app-show-project-previews>
+</section>

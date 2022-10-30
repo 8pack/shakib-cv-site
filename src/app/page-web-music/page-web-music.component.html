@@ -1,0 +1,26 @@
+<app-project-page-preview sclass="banner_music" imgsrc='assets/img/shakibs_music_server.png' title="Shakib's Music Server" desc="Media Player Web App" tags="web | development | personal | python" routerLink="/music" onclick="openPage()"></app-project-page-preview>
+
+<section class="content" role="main">
+
+  <app-project-page-details
+    details="
+    <p><b>Project URL: <a href='/music'>#</a></b></p>
+    <ul>
+      <li>Personal and private Web App I created because of my love of anime and anime music.</li>
+      <li>Standalone html file with no need for servers or internet connection that I could use for quick access to my anime music collection (works with xspf playlists).</li>
+      <li>HTML file allows easy use of windows 10 media pause/play feature in browsers.</li>
+      <li>.exe media players (VLC) don't work with this unless it is the active window; Chrome does.</li>
+      <li>Python script updates the default playlists with any changes made with one click (.exe file).</li>
+      <li>Ability toad a lyrics file (.txt) to view lyrics while listening to song.</li>
+      <li>Ability to playback video files also included.</li>
+    </ul>">
+
+  </app-project-page-details>
+
+  <app-show-project-previews
+    [web_array]="['alty', 'patriot', 'emce', 'fch', 'scriptcase', 'webalert', 'we_plantin']"
+    [mobile_array]="['cimh_app', 'crowdsourced']"
+    [other_array]="['pest_disease', 'filebound', 'cid']"
+  >
+  </app-show-project-previews>
+</section>

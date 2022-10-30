@@ -5,8 +5,6 @@
   /* margin: 0px 20px; */
   /* box-shadow: rgb(34 34 34 / 18%) -4px 8px 20px 0px; */
   cursor: pointer;
-  opacity: 0%;
-  transform: scale(0);
 }
 .project_container:hover {
 }
@@ -14,18 +12,22 @@
   /* background: rgb(34 34 34 / 18%); */
   /* margin-top: -50px; */
   transform: translateY(0px);
-  opacity: 80%;
+  opacity: 1;
 }
 .project_container:hover .project_text{
-  opacity: 80%;
+  opacity: 0.2;
 }
 .project_container:hover .title{
   color: var(--blue);
 }
 .project_container[data-scroll="in"]{
-  opacity: 100%;
+  opacity: 1.0;
   transform: scale(1);
   transition-duration: .5s;
+}
+.project_container[data-scroll="out"]{
+  opacity: 0;
+  transform: scale(0);
 }
 
 img, .img_wrap {
@@ -35,13 +37,13 @@ img, .img_wrap {
   height: 244px;
   margin-top: 20px;
   margin-left: 20px;
-  /* padding: 5px 5px 0px 6em; */
   background-repeat: no-repeat;
-  background-size: contain;
   background-size: cover;
+  background-position: center top;
   overflow: hidden;
   object-fit: contain;
   box-shadow: rgb(0 0 0 / 22%) 0px 8px 20px 0px;
+  box-shadow: var(--blue-80) 0px 8px 20px 0px;
   transform: translateY(20px);
   transition: opacity 0.2s linear 0s, transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;
 }
@@ -50,8 +52,8 @@ img::after, .img_wrap::after {
 }
 
 @keyframes opacity {
-  from { opacity: 100% }
-  to { opacity: 50% }
+  from { opacity: 0.5 }
+  to { opacity: 1.0 }
 }
 
 .project_text {
@@ -65,6 +67,7 @@ img::after, .img_wrap::after {
   background: rgba(255, 255, 255, 0.9);
   /* box-shadow: rgb(34 34 34 / 18%) -4px 8px 20px 0px; */
   box-shadow: rgb(34 34 34 / 18%) -4px 8px 20px 0px;
+  box-shadow: var(--blue-80) 0px 8px 20px 0px;
   padding: 20px 0px 20px 20px;
   transition: opacity 0.2s linear 0s, transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0s;
 }
@@ -72,11 +75,41 @@ img::after, .img_wrap::after {
 .title {
   font-size: 40px;
   font-weight: bold;
+  line-height: 1.2em;
 }
 .desc {
   font-size: 24px;
   font-weight: bold;
+  line-height: 1.2em;
 }
 .tags {
   font-size: 20px;
+  line-height: 1.2em;
+}
+.tags:hover {
+  color: var(--blue);
+}
+
+
+@media screen and (max-width: 575px) {
+  .title {
+    font-size: 32px;
+  }
+  .desc {
+    font-size: 20px;
+    margin-top: 0.7em;
+    margin-bottom: 0.7em;
+  }
+  .tags {
+    font-size: 18px;
+  }
+
+
+  img, .img_wrap {
+    position: relative;
+    z-index: -1;
+    width: 280px;
+    height: 260px;
+    margin: 0px 20px 0px;
+  }
 }

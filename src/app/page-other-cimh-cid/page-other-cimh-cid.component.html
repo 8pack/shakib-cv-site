@@ -1,0 +1,23 @@
+<app-project-page-preview sclass="banner_cimh_cid" imgsrc='assets/img/cimh_cid.png' title="CIMH Climate Impacts Dataset" desc="Climate Events & Impacts Compilation " tags="python | excel | georeferencing" routerLink="/cimh-cid" onclick="openPage()"></app-project-page-preview>
+
+<section class="content" role="main">
+
+  <app-project-page-details
+    details="
+    <p><b>Project URL: <a href='http://cid.cimh.edu.bb/' rel='noopener noreferrer' target='_blank'>http://cid.cimh.edu.bb/</a></b></p>
+    <ul>
+      <li>Wrote a Python script to check for duplicates in an excel doc of CIMH's Climate Impacts Dataset.</li>
+      <li>Created macros to flag various fields that might potentially need disaggregation.</li>
+      <li>Georeferenced impacts using google earth.</li>
+    </ul>">
+
+  </app-project-page-details>
+
+
+  <app-show-project-previews
+    [web_array]="['alty', 'patriot', 'emce', 'fch', 'music', 'scriptcase', 'webalert', 'we_plantin']"
+    [mobile_array]="['cimh_app', 'crowdsourced']"
+    [other_array]="['pest_disease', 'filebound']"
+  >
+  </app-show-project-previews>
+</section>

@@ -1,0 +1,22 @@
+<app-project-page-preview sclass="banner_emceltd" imgsrc='assets/img/emceltd.png' title="emceltd.com" desc="Website for emceltd" tags="web | wordpress | freelance" routerLink="/emce" onclick="openPage()"></app-project-page-preview>
+
+<section class="content" role="main">
+
+  <app-project-page-details
+    details="
+    <p><b>Project URL: <a href='https://www.emceltd.com/' rel='noopener noreferrer' target='_blank'>https://www.emceltd.com/</a></b></p>
+    <ul>
+      <li>Used Divi WordPress to update the content for the new EMCE website.</li>
+      <li>Designed and implemented a Map page for the site.</li>
+      <li>Added many project pages to the site.</li>
+    </ul>">
+
+  </app-project-page-details>
+
+  <app-show-project-previews
+    [web_array]="['alty', 'patriot', 'fch', 'music', 'scriptcase', 'webalert', 'we_plantin']"
+    [mobile_array]="['cimh_app', 'crowdsourced']"
+    [other_array]="['pest_disease', 'filebound', 'cid']"
+  >
+  </app-show-project-previews>
+</section>
