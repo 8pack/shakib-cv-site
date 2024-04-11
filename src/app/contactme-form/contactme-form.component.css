@@ -44,6 +44,7 @@
   outline: none;
   border: none;
   border-bottom: rgb(25 118 210 / 25%) solid 1px;
+  z-index: 2;
 }
 .input-group textarea {
   resize: none;
@@ -51,12 +52,16 @@
 }
 
 /* Moves Label up on input focus */
-.input-group input:focus + label, .input-group textarea:focus + label{
+.input-group input:focus + label, .input-group textarea:focus + label,
+.input-group input:not(:placeholder-shown) + label, .input-group textarea:not(:placeholder-shown) + label,
+/* .input-group input:autofill + label, .input-group textarea:autofill + label, */
+.input-group input:-webkit-autofill + label, .input-group textarea:-webkit-autofill + label {
   transform: translateY(-24px);
 }
 
 .input-group > label {
   color: var(--blue);
+  height: 1em;
   font-size: 24px;
   font-weight: bold;
   position: absolute;
@@ -66,6 +71,7 @@
   padding-left: var(--input_padding);
   transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1) 0s;
   transform-origin: left center;
+  z-index: 1;
 }
 
 .bottom-area {
@@ -104,5 +110,14 @@
     box-shadow: rgb(25 118 210 / 25%) 0px 0px 20px 0px;
     box-shadow: var(--blue-80) 0px 8px 20px 0px;
     /* #1976d2 = 25, 118, 210 📋*/
+  }
+
+  
+  .input-group {
+    flex: 0 1 100%;
+  }
+
+  .input-group > label {
+    
   }
 }

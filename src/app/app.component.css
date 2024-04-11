@@ -219,6 +219,46 @@ footer a {
 }
 
 @media screen and (max-width: 575px) {
+
+  .toolbar {
+  }
+  .inner  {
+    max-width: 575px;
+    margin: auto;
+    color: #fff;
+  }
+  .inner nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .inner ul {
+    padding: 0px;
+  }
+  .inner li {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+  .inner li:hover {
+  }
+  .cv_link li {
+    background: #fff;
+    color: var(--blue);
+    padding: 0px 5px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  .inner a{
+    color: #fff;
+  }
+
+  .logo {
+    height: 50px;
+    width: auto;
+  }
+
+
   footer{
     text-align: center;
   }

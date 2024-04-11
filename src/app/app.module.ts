@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RecaptchaModule, RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module } from "ng-recaptcha";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -17,9 +18,9 @@ import { SkillItemComponent } from './skill-item/skill-item.component';
 import { BannerHeyThereComponent } from './banner-hey-there/banner-hey-there.component';
 import { ProjectPageDetailsComponent } from './project-page-details/project-page-details.component';
 import { ProjectPagePreviewComponent } from './project-page-preview/project-page-preview.component';
-import { PageWebEmceltdComponent } from './page-web-emceltd/page-web-emceltd.component';
-import { PageWebPatriotsslComponent } from './page-web-patriotssl/page-web-patriotssl.component';
 import { ShowProjectPreviewsComponent } from './show-project-previews/show-project-previews.component';
+
+const RECAPTCHA_V3_SHAKIBSMALL = '6LdfguQiAAAAAPms-cZ2zcMCDaMyDz150m4hjcw7';
 
 @NgModule({
   declarations: [
@@ -36,18 +37,20 @@ import { ShowProjectPreviewsComponent } from './show-project-previews/show-proje
     BannerHeyThereComponent,
     ProjectPageDetailsComponent,
     ProjectPagePreviewComponent,
-    PageWebEmceltdComponent,
-    PageWebPatriotsslComponent,
     ShowProjectPreviewsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    RecaptchaModule,
+    RecaptchaV3Module,
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [ContactService],
+  providers: [ContactService,
+    { provide: RECAPTCHA_V3_SITE_KEY, useValue: RECAPTCHA_V3_SHAKIBSMALL }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -47,4 +47,38 @@
   .project_content {
     padding: 80px 40px;
   }
+
+  :host ::ng-deep .project_content {
+    a  {
+      color: var(--blue);
+    }
+    ul, p {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .project_content {
+    padding: 80px 40px;
+  }
+
+  :host ::ng-deep .project_content {
+    a  {
+    }
+    ul, p {
+      font-size: 1rem;
+    }
+    ul {
+      li {
+        &::before {
+          padding: 0.4rem;
+          left: -2rem;
+          top: 1.4rem;
+          height: 5px;
+          width: 5px;
+        }
+      }
+    }
+  }
 }
